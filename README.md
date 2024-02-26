@@ -8,8 +8,6 @@ npm install
 
 When having a combination of:
 
-- `"module": "NodeNext"` in `tsconfig.json`
-- `"moduleResolution": "NodeNext"` in `tsconfig.json`
 - `"type": "module"` in `package.json`
 - `output: 'standalone'` in `next.config.mjs`
 - A custom directory to build from when running `npm run build custom-dir`
