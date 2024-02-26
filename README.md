@@ -1,5 +1,11 @@
 # nextjs-standalone-esm-bug
 
+To start
+
+```
+npm install
+```
+
 When having a combination of:
 
 - `"module": "NodeNext"` in `tsconfig.json`
@@ -15,5 +21,13 @@ npm run build custom-dir
 ```
 
 The output in `custom-dir/.next/standalone/custom-dir/server.js` is not ESM compatible.
+
+This means we cannot do:
+
+```
+node custom-dir/.next/standalone/custom-dir/server.js
+```
+
+without getting a reference error `ReferenceError: require is not defined in ES module scope, you can use import instead`.
 
 Expected outcome is for standalone output to be ESM code.
